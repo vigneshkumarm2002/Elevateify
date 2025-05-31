@@ -29,6 +29,7 @@ interface NavItemsProps {
   }[];
   className?: string;
   onItemClick?: () => void;
+  visible?: boolean;
 }
 
 interface MobileNavProps {
@@ -104,23 +105,31 @@ export const NavBody = ({ children, className, visible }: NavBodyProps) => {
       }}
       className={cn(
         "relative z-[60] mx-auto hidden w-full max-w-7xl flex-row items-center justify-between self-start rounded-full bg-transparent px-4 py-2 lg:flex dark:bg-transparent",
-        visible && "bg-white/80 dark:bg-neutral-950/80",
+        visible && "bg-white/80 text-black dark:bg-neutral-950/80",
         className,
       )}
     >
-      {children}
+      {React.Children.map(children, (child) =>
+        React.isValidElement(child)
+          ? React.cloneElement(
+              child as React.ReactElement<{ visible?: boolean }>,
+              { visible },
+            )
+          : child,
+      )}
     </motion.div>
   );
 };
 
-export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
+export const NavItems = ({ items, className, onItemClick, visible }: NavItemsProps) => {
   const [hovered, setHovered] = useState<number | null>(null);
 
   return (
     <motion.div
       onMouseLeave={() => setHovered(null)}
       className={cn(
-        "absolute inset-0 hidden flex-1 flex-row items-center justify-center space-x-2 text-sm font-medium text-zinc-600 transition duration-200 hover:text-zinc-800 lg:flex lg:space-x-2",
+        "absolute inset-0 hidden flex-1 flex-row items-center justify-center space-x-2 text-sm font-medium transition duration-200 lg:flex lg:space-x-2",
+        visible ? "text-black hover:text-black" : "text-white hover:text-white",
         className,
       )}
     >
@@ -128,14 +137,17 @@ export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
         <a
           onMouseEnter={() => setHovered(idx)}
           onClick={onItemClick}
-          className="relative px-4 py-2 text-neutral-600 dark:text-neutral-300"
+          className={cn(
+            "relative px-4 py-2",
+            visible ? "text-black" : "text-white"
+          )}
           key={`link-${idx}`}
           href={item.link}
         >
           {hovered === idx && (
             <motion.div
               layoutId="hovered"
-              className="absolute inset-0 h-full w-full rounded-full bg-gray-100 dark:bg-neutral-800"
+              className="absolute inset-0 h-full w-full rounded-full bg-[#F564A9]"
             />
           )}
           <span className="relative z-20">{item.name}</span>
@@ -230,19 +242,21 @@ export const MobileNavToggle = ({
   );
 };
 
-export const NavbarLogo = () => {
+export const NavbarLogo = ({ visible }: { visible?: boolean }) => {
   return (
     <a
       href="#"
       className="relative z-20 mr-4 flex items-center space-x-2 px-2 py-1 text-sm font-normal text-black"
     >
+      <div className="bg-white rounded-sm p-1">
       <img
-        src="https://assets.aceternity.com/logo-dark.png"
+        src="/assets/Elevateify.png"
         alt="logo"
         width={30}
         height={30}
       />
-      <span className="font-medium text-2xl text-black dark:text-white font-bricolage-bold">Elevateify</span>
+      </div>
+      <span className={`font-space-grotesk-bold text-2xl tracking-wide ${visible ? "text-black" : "text-white"}`}>Elevateify</span>
     </a>
   );
 };

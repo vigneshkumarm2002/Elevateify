@@ -4,6 +4,7 @@ import { motion, MotionValue, useScroll, useTransform } from "motion/react";
 import { ComponentPropsWithoutRef, FC, ReactNode, useRef } from "react";
 
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 
 export interface TextRevealProps extends ComponentPropsWithoutRef<"div"> {
   children: string;
@@ -28,6 +29,15 @@ export const TextReveal: FC<TextRevealProps> = ({ children, className }) => {
           "sticky top-0 mx-auto flex flex-col justify-center h-[50%] max-w-7xl items-center bg-transparent px-[1rem] py-[5rem]"
         }
       >
+         <> {/* Asterisk illustration - bottom right */}
+          <div className="absolute top-10 -left-20 w-56 h-56 opacity-40 rotate-45">
+          <Image
+            src="/assets/Asterisk.svg"
+            alt=""
+            fill
+            className="object-contain"
+          />
+        </div>
         <h1 className="text-[4vw] text-left font-bold text-[#F564A9]">
           About us
         </h1>
@@ -47,7 +57,17 @@ export const TextReveal: FC<TextRevealProps> = ({ children, className }) => {
             );
           })}
         </span>
+        <div className="absolute bottom-20 -right-20 w-36 h-36 opacity-40 ">
+          <Image
+            src="/assets/Asterisk.svg"
+            alt=""
+            fill
+            className="object-contain"
+          />
+        </div>
+        </>
       </div>
+      
     </div>
   );
 };

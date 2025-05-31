@@ -38,9 +38,21 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative z-20 ">
           {/* Company Info & Address */}
           <div className="space-y-4">
-            <h3 className="font-bricolage-bold text-2xl mb-4 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
-              Elevateify
-            </h3>
+            {/* Logo */}
+            <div className="flex items-center space-x-2 mb-4">
+              <div className="bg-white rounded-sm p-1">
+                <img
+                  src="/assets/Elevateify.png"
+                  alt="logo"
+                  width={30}
+                  height={30}
+                />
+              </div>
+              <span className="font-space-grotesk-bold text-2xl tracking-wide text-white">
+                Elevateify
+              </span>
+            </div>
+            
             <p className="text-gray-400 text-sm leading-relaxed">
             Building bold, authentic brands through content that connects and marketing that performs.
             </p>
@@ -123,7 +135,7 @@ const Footer = () => {
                   href="#"
                   className="text-gray-400 text-sm hover:text-[#F564A9] transition-colors"
                 >
-                  Social Media Management
+                  Social Media Marketing
                 </a>
               </li>
               <li>
@@ -187,7 +199,7 @@ const Footer = () => {
 
         {/* Large Brand Name - At bottom of grid */}
         <div className="relative flex items-center justify-center pointer-events-none z-0 -mt-20">
-          <h1 className="font-bricolage-bold text-[15vw] text-center leading-none tracking-wider text-transparent bg-clip-text bg-gradient-to-b from-gray-600 to-gray-800 opacity-40 select-none">
+          <h1 className="font-space-grotesk-bold text-[15vw] text-center leading-none tracking-wider text-transparent bg-clip-text bg-gradient-to-b from-gray-600 to-gray-800 opacity-40 select-none">
             Elevateify
           </h1>
         </div>

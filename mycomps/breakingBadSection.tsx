@@ -10,15 +10,15 @@ export default function BreakingBadSection() {
         {/* Main heading */}
         <div className="mb-4">
           <h2 className="text-5xl md:text-7xl font-bricolage-bold text-gray-900 mb-2 leading-tight">
-            <span className="text-[#F564A9]">YOU</span> KNOW THE{" "}
-            <span className="bg-gradient-to-r from-[#F564A9] to-[#FDAF75] bg-clip-text text-transparent">
-              BUSINESS
+            <span className="text-[#F564A9]">You</span> know the{" "}
+            <span className="text-blue-500">
+              Business
             </span>
           </h2>
           <h2 className="text-5xl md:text-7xl font-bricolage-bold text-gray-900 leading-tight">
-            <span className="text-[#F564A9]">WE</span> KNOW THE{" "}
-            <span className="bg-gradient-to-r from-[#F564A9] to-[#FDAF75] bg-clip-text text-transparent">
-              STRATEGY
+            <span className="text-[#F564A9]">We</span> know the{" "}
+            <span className="text-blue-500">
+              Strategy
             </span>
           </h2>
         </div>

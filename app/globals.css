@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap');
 @import "tailwindcss";
 @import "tw-animate-css";
+
 
 @custom-variant dark (&:is(.dark *));
 
@@ -315,6 +317,117 @@ body {
 .font-public-sans-black {
   font-family: var(--font-public-sans), sans-serif;
   font-weight: 900;
-  font-optical-sizing: auto;
   font-style: normal;
+}
+
+/* Orbitron Font Utility Classes */
+.font-orbitron {
+  font-family: var(--font-orbitron), "Orbitron", monospace;
+  font-style: normal;
+  letter-spacing: 0.02em;
+}
+
+.font-orbitron-regular {
+  font-family: var(--font-orbitron), "Orbitron", monospace;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 0.02em;
+}
+
+.font-orbitron-medium {
+  font-family: var(--font-orbitron), "Orbitron", monospace;
+  font-weight: 500;
+  font-style: normal;
+  letter-spacing: 0.02em;
+}
+
+.font-orbitron-semibold {
+  font-family: var(--font-orbitron), "Orbitron", monospace;
+  font-weight: 600;
+  font-style: normal;
+  letter-spacing: 0.02em;
+}
+
+.font-orbitron-bold {
+  font-family: var(--font-orbitron), "Orbitron", monospace;
+  font-weight: 700;
+  font-style: normal;
+  letter-spacing: 0.02em;
+}
+
+.font-orbitron-extrabold {
+  font-family: var(--font-orbitron), "Orbitron", monospace;
+  font-weight: 800;
+  font-style: normal;
+  letter-spacing: 0.02em;
+}
+
+.font-orbitron-black {
+  font-family: var(--font-orbitron), "Orbitron", monospace;
+  font-weight: 900;
+  font-style: normal;
+  letter-spacing: 0.02em;
+}
+
+/* Space Grotesk Font Utility Classes */
+.font-space-grotesk {
+  font-family: var(--font-space-grotesk), "Space Grotesk", sans-serif;
+  font-style: normal;
+}
+
+.font-space-grotesk-light {
+  font-family: var(--font-space-grotesk), "Space Grotesk", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.font-space-grotesk-regular {
+  font-family: var(--font-space-grotesk), "Space Grotesk", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.font-space-grotesk-medium {
+  font-family: var(--font-space-grotesk), "Space Grotesk", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.font-space-grotesk-semibold {
+  font-family: var(--font-space-grotesk), "Space Grotesk", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.font-space-grotesk-bold {
+  font-family: var(--font-space-grotesk), "Space Grotesk", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* Animated Button Styles */
+.button-icon {
+  transition: transform 0.3s ease-in-out;
+}
+
+.button-icon-copy {
+  position: absolute;
+  transform: translate(-150%, 150%);
+  transition: transform 0.3s ease-in-out 0.1s;
+}
+
+.group:hover .button-icon {
+  transform: translate(150%, -150%);
+}
+
+.group:hover .button-icon-copy {
+  transform: translate(0);
+}
+
+.button-icon-wrapper {
+  transition: color 0.3s ease-in-out;
+}
+
+.group:hover .button-icon-wrapper {
+  color: #000;
 }
