@@ -60,29 +60,29 @@ const Footer = () => {
               <div className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-[#F564A9] mt-0.5 flex-shrink-0" />
                 <p className="text-gray-400 text-sm">
-                  123 Creative Street,
+                  #13 Jawarapa Compound,
                   <br />
-                  Design District,
+                  Ganga Nagar,
                   <br />
-                  New York, NY 10001
+                  Bangalore, 560032
                 </p>
               </div>
               <div className="flex items-center gap-3">
                 <Phone className="w-5 h-5 text-[#F564A9]" />
                 <a
-                  href="tel:+1234567890"
+                  href="tel:9606274348"
                   className="text-gray-400 text-sm hover:text-[#F564A9] transition-colors"
                 >
-                  +1 (234) 567-890
+                  9606274348
                 </a>
               </div>
               <div className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-[#F564A9]" />
                 <a
-                  href="mailto:hello@elevateify.com"
+                  href="mailto:info@elevateify.com"
                   className="text-gray-400 text-sm hover:text-[#F564A9] transition-colors"
                 >
-                  hello@elevateify.com
+                 Info@elevateify.com
                 </a>
               </div>
             </div>

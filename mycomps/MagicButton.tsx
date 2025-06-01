@@ -7,6 +7,9 @@ const MagicButton = ({
 }) => {
   return (
     <button
+    onClick={() => {
+      window.location.href = "mailto:info@elevateify.com";
+    }}
       className={`group inline-flex items-center gap-3 z-5 cursor-pointer mt-16 text-white font-semibold rounded-full px-2 py-2 pr-6 transition-colors duration-300 overflow-hidden whitespace-nowrap ${color} ${hoverColor}`}
     >
       <span className="relative w-8 h-8 flex-shrink-0 grid place-items-center rounded-full bg-white text-black overflow-hidden">

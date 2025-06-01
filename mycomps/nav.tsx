@@ -19,7 +19,7 @@ const LetsTalkButton = ({ className = "" }) => {
     <button className={`cursor-pointer z-[9999] ${className}`}>
       <div className="">
         <a 
-          href="#" 
+           href="mailto:info@elevateify.com"
           className="inline-block relative bg-white hover:bg-[#F564A9] text-black  hover:text-white shadow-[0_0_30px_0_rgba(0,0,0,0.15)] text-base font-medium py-2 px-4 leading-none rounded-[3.8rem] transition-all duration-350 z-5 cursor-pointer no-underline"
         >
           <span className="flex items-center">
