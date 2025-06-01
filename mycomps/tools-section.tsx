@@ -184,10 +184,6 @@ const PhysicsIcon: React.FC<PhysicsIconProps> = ({ tool, index, containerRef }) 
         scale: 0,
         opacity: 0
       }}
-      animate={{
-        scale: 1,
-        opacity: 1
-      }}
       transition={{
         delay: index * 0.1,
         type: "spring",
