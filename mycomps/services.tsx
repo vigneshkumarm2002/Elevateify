@@ -167,10 +167,10 @@ export const Card: React.FC<CardProps> = ({
           top: `calc(-5vh + ${i * 25}px)`,
           willChange: "transform",
         }}
-        className={`flex flex-col relative -top-[25%] h-[450px] w-[70%] rounded-xl p-12 origin-top bg-black border border-gray-800 shadow-2xl backdrop-blur-sm transform-gpu`}
+        className={`flex flex-col relative -top-[25%] h-[460px] w-[80%] rounded-xl p-8 origin-top bg-black border border-gray-800 shadow-2xl backdrop-blur-sm transform-gpu`}
       >
         <div className={`flex h-full gap-16`}>
-          <div className={`w-[50%] relative flex flex-col justify-between`}>
+          <div className={`w-[50%] relative p-4 flex flex-col justify-between`}>
             <div>
               <div className="inline-flex items-center gap-2 mb-6">
                 <span style={{ backgroundColor: brandColor }} className="w-8 h-8 rounded-full flex items-center justify-center text-sm font-medium text-white">{i + 1}</span>
